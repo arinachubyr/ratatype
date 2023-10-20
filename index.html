@@ -16,7 +16,7 @@
     <script src="js/tailwind.config.js"></script>
   </head>
   <body class="min-h-screen overflow-x-hidden font-base box-border">
-    <header class="w-full py-5 container mx-auto text-center">
+    <header class="container w-full mx-auto text-center py-3 sm:py-5">
       <a
         class="inline-block focus:outline-none focus-visible:outline focus-visible:outline-cyan-300 focus-visible:outline-offset-2 focus-visible:outline-2"
         href="#"
@@ -25,65 +25,85 @@
       </a>
     </header>
     <main class="container mx-auto">
-      <section class="flex flex-col space-y-6 pt-6 pb-20 text-center">
+      <section class="flex flex-col pb-20 text-center pt-3 sm:pt-6">
         <img
           src="img/welcome.svg"
           alt="Увійти"
-          class="w-[100px] h-[100px] mx-auto"
+          class="w-[100px] h-[100px] mx-auto mb-3 sm:mb-5"
         />
         <h1
-          class="text-5xl md:text-title tracking-title text-darkBlue font-extrabold"
+          class="tracking-title text-darkBlue font-extrabold text-5xl md:text-[64px]"
         >
           Увійти
         </h1>
-        <div class="max-w-[550px] w-full mx-auto mt-2 space-y-6">
+        <div class="max-w-[550px] w-full mx-auto mt-5 sm:mt-6">
           <a
-            class="inline-flex items-center justify-center w-full text-xl font-bold text-darkBlue py-2 relative rounded-lg border-2 border-lightBlue bg-white before:absolute before:-left-px before:-right-px before:bottom-[-5px] before:h-full before:rounded-lg before:bg-lightBlue before:z-[-1] hover:bg-blue-50 hover:transition-all focus-visible:outline-none focus-visible:ring focus-visible:ring-cyan-300"
+            class="inline-flex items-center justify-center w-full font-bold text-darkBlue py-2 relative rounded-lg border-2 border-lightBlue bg-white before:absolute before:-left-px before:-right-px before:bottom-[-5px] before:h-full before:rounded-lg before:bg-lightBlue before:z-[-1] hover:bg-blue-50 hover:transition-all focus-visible:outline-none focus-visible:ring focus-visible:ring-cyan-300 text-lg sm:text-xl"
             href="#"
           >
-            <img src="img/google.svg" alt="Google" class="mr-1.5" />
+            <img
+              src="img/google.svg"
+              alt="Google"
+              class="mr-1.5 w-[25px] h-[25px] sm:w-[30px] sm:h-[30px]"
+            />
             Google
           </a>
-          <p class="text-xl text-darkBlue font-medium">або</p>
+          <p
+            class="text-darkBlue font-medium mt-5 mb-4 sm:mt-7 sm:mb-5 text-lg sm:text-xl"
+          >
+            або
+          </p>
           <form method="post" name="auth" class="w-full">
-            <div class="relative">
-              <input
-                value=""
-                type="email"
-                name="email"
-                id="email"
-                class="w-full bg-lightGrey border-2 border-grey py-5 px-4 mb-4 text-xl placeholder-darkGrey rounded-lg focus:outline focus:outline-cyan-300 focus:outline-offset-2 focus:outline-2"
-                placeholder="Ел. пошта"
-                required
-              />
-            </div>
-            <div class="relative">
-              <input
-                value=""
-                type="password"
-                name="password"
-                id="password"
-                class="w-full bg-lightGrey border-2 border-grey py-5 px-4 text-xl placeholder-darkGrey rounded-lg focus:outline focus:outline-cyan-300 focus:outline-offset-2 focus:outline-2"
-                placeholder="Пароль"
-                required
-              />
-              <div class="text-left mt-1 mb-6">
-                <a
-                  href="#"
-                  class="border-b border-darkGrey text-base text-darkGrey hover:text-lightBlue hover:border-lightBlue focus:outline-none focus-visible:outline focus-visible:outline-cyan-300 focus-visible:outline-offset-2 focus-visible:outline-2"
-                  >Не пам'ятаєш пароль?</a
+            <div class="space-y-3 sm:space-y-5">
+              <div class="relative">
+                <input
+                  value=""
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder=""
+                  class="peer h-[60px] sm:h-[70px] w-full bg-lightGrey border-2 border-grey placeholder-darkGrey rounded-lg focus:outline focus:outline-cyan-300 focus:outline-offset-2 focus:outline-2 px-3 py-5 pb-0 text-lg sm:pt-7 sm:pb-1.5 sm:text-xl"
+                  required
+                />
+                <label
+                  class="font-medium pointer-events-none absolute left-3.5 sm:left-3 top-2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:translate-y-0 peer-focus:top-2 flex w-full text-sm sm:text-base font-medium text-darkGrey transition-all peer-placeholder-shown:text-xl peer-focus:text-sm sm:peer-focus:text-base"
                 >
+                  Ел. пошта
+                </label>
+              </div>
+              <div class="relative">
+                <input
+                  value=""
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder=""
+                  class="peer h-[60px] sm:h-[70px] w-full bg-lightGrey border-2 border-grey placeholder-darkGrey rounded-lg focus:outline focus:outline-cyan-300 focus:outline-offset-2 focus:outline-2 px-3 py-5 pb-0 text-lg sm:pt-7 sm:pb-1.5 sm:text-xl"
+                  required
+                />
+                <label
+                  class="font-medium pointer-events-none absolute left-3.5 sm:left-3 top-2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:translate-y-0 peer-focus:top-2 flex w-full text-sm sm:text-base font-medium text-darkGrey transition-all peer-placeholder-shown:text-xl peer-focus:text-sm sm:peer-focus:text-base"
+                >
+                  Пароль
+                </label>
               </div>
             </div>
+            <div class="text-left mt-1 mb-4 sm:mb-6">
+              <a
+                href="#"
+                class="border-b border-darkGrey text-darkGrey hover:text-lightBlue hover:border-lightBlue focus:outline-none focus-visible:outline focus-visible:outline-cyan-300 focus-visible:outline-offset-2 focus-visible:outline-2 text-sm sm:text-base"
+                >Не пам'ятаєш пароль?</a
+              >
+            </div>
             <button
-              class="w-full text-xl font-bold text-darkBlue py-2 relative rounded-lg border-2 border-darkYellow bg-lightYellow before:absolute before:-left-px before:-right-px before:bottom-[-5px] before:h-full before:rounded-lg before:bg-darkYellow before:z-[-1] hover:bg-amber-200 hover:transition-all focus-visible:outline-none focus-visible:ring focus-visible:ring-cyan-300"
+              class="w-full font-bold text-darkBlue py-2 relative rounded-lg border-2 border-darkYellow bg-lightYellow before:absolute before:-left-px before:-right-px before:bottom-[-5px] before:h-full before:rounded-lg before:bg-darkYellow before:z-[-1] hover:bg-amber-200 hover:transition-all focus-visible:outline-none focus-visible:ring focus-visible:ring-cyan-300 text-lg sm:text-xl"
               name="enter"
               type="submit"
             >
               Увійти
             </button>
           </form>
-          <p class="text-xl text-darkBlue pt-1">
+          <p class="text-darkBlue mt-6 text-lg sm:mt-7 sm:text-xl">
             Ще не з нами?
             <a
               class="font-bold border-b border-darkGrey hover:text-lightBlue hover:border-lightBlue focus:outline-none focus-visible:outline focus-visible:outline-cyan-300 focus-visible:outline-offset-2 focus-visible:outline-2"
