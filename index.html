@@ -21,7 +21,7 @@
         class="inline-block focus:outline-none focus-visible:outline focus-visible:outline-cyan-300 focus-visible:outline-offset-2 focus-visible:outline-2"
         href="#"
       >
-        <img src="img/logo.svg" class="mx-auto" alt="Ratatype's logo" />
+        <img src="img/logo.svg" class="mx-auto" alt="Ratatype лого" />
       </a>
     </header>
     <main class="container mx-auto">
@@ -53,8 +53,8 @@
           >
             або
           </p>
-          <form method="post" name="auth" class="w-full">
-            <div class="space-y-3 sm:space-y-5">
+          <form method="post" name="auth" class="w-full" id="autu">
+            <div class="space-y-1 mb-3 sm:mb-5">
               <div class="relative">
                 <input
                   value=""
@@ -62,6 +62,7 @@
                   name="email"
                   id="email"
                   placeholder=""
+                  onblur="if (buttonClicked) formValidation(event, ['email'])"
                   class="peer h-[60px] sm:h-[70px] w-full bg-lightGrey border-2 border-grey placeholder-darkGrey rounded-lg focus:outline focus:outline-cyan-300 focus:outline-offset-2 focus:outline-2 px-3 py-5 pb-0 text-lg sm:pt-7 sm:pb-1.5 sm:text-xl"
                   required
                 />
@@ -71,6 +72,14 @@
                   Ел. пошта
                 </label>
               </div>
+              <p
+                class="hidden text-left text-red text-sm sm:text-base"
+                id="email-error"
+              >
+                Вкажіть вашу ел. пошту
+              </p>
+            </div>
+            <div class="space-y-1">
               <div class="relative">
                 <input
                   value=""
@@ -78,6 +87,7 @@
                   name="password"
                   id="password"
                   placeholder=""
+                  onblur="if (buttonClicked) formValidation(event, ['password'])"
                   class="peer h-[60px] sm:h-[70px] w-full bg-lightGrey border-2 border-grey placeholder-darkGrey rounded-lg focus:outline focus:outline-cyan-300 focus:outline-offset-2 focus:outline-2 px-3 py-5 pb-0 text-lg sm:pt-7 sm:pb-1.5 sm:text-xl"
                   required
                 />
@@ -87,6 +97,12 @@
                   Пароль
                 </label>
               </div>
+              <p
+                class="hidden text-left text-red text-sm sm:text-base"
+                id="password-error"
+              >
+                Вкажіть ваш пароль
+              </p>
             </div>
             <div class="text-left mt-1 mb-4 sm:mb-6">
               <a
@@ -99,6 +115,7 @@
               class="w-full font-bold text-darkBlue py-2 relative rounded-lg border-2 border-darkYellow bg-lightYellow before:absolute before:-left-px before:-right-px before:bottom-[-5px] before:h-full before:rounded-lg before:bg-darkYellow before:z-[-1] hover:bg-amber-200 hover:transition-all focus-visible:outline-none focus-visible:ring focus-visible:ring-cyan-300 text-lg sm:text-xl"
               name="enter"
               type="submit"
+              onclick="buttonClicked = true; formValidation(event, ['email', 'password'])"
             >
               Увійти
             </button>
@@ -114,5 +131,6 @@
         </div>
       </section>
     </main>
+    <script src="js/script.js" defer></script>
   </body>
 </html>

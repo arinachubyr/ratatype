@@ -4,6 +4,7 @@ tailwind.config = {
       fontFamily: { base: ["Manrope", "sans-serif"] },
       fontSize: { lg: ["17px", "25px"] },
       colors: {
+        red: "#FF3B30",
         lightBlue: "#00ACFF",
         darkBlue: "#0A335C",
         grey: "#1742581A",
