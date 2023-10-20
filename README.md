@@ -5,7 +5,7 @@ This repository contains my completed test task for Ratatype for the position of
 # Repository Structure
 
 1. index.html: The main HTML file with the webpage layout.
-2. js/: Directory containing JS file
+2. js/: Directory containing JS files.
 3. img/: Directory for images used in the project.
 
 # Running the Project
